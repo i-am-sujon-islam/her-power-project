@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { CgMenuRightAlt } from "react-icons/cg";
 import Container from "./Container";
 
@@ -10,12 +10,20 @@ const Header = () => {
   ];
 
   const [menu, setMenu] = useState(false);
+  const ref = useRef();
 
   const handleMenu = () => {
     if (menu) {
       setMenu(false);
     } else {
       setMenu(true);
+    }
+  };
+  const handleClick = (e) => {
+    if (e.target.contains(ref.current)) {
+      setMenu(true);
+    } else {
+      setMenu(false);
     }
   };
   return (
@@ -61,7 +69,11 @@ const Header = () => {
             className="block md:hidden text-4xl cursor-pointer hover:text-white/60 duration-300"
           />
           {menu && (
-            <div className="w-44 bg-gradient-to-b py-10 flex flex-col justify-center items-center gap-6 text-lg absolute top-full -right-5 z-20">
+            <div
+              onClick={handleClick}
+              ref={(node) => (ref.current = node)}
+              className="w-44 bg-gradient-to-b py-10 flex flex-col justify-center items-center gap-6 text-lg absolute top-full -right-5 z-20"
+            >
               {menuItem?.map((item) => (
                 <a
                   className="hover:text-purple-700 hover:bg-white/80 w-full text-center py-2 duration-300 border-r-2 border-black/75 pr-2 lg:pr-4"

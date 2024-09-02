@@ -2,6 +2,7 @@ import "./App.css";
 import Banner from "./components/Banner";
 import Contact from "./components/Contact";
 import Course from "./components/Course";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ProjectPerson from "./components/ProjectPerson";
 
@@ -14,6 +15,7 @@ function App() {
       <Banner />
       <ProjectPerson />
       <Contact />
+      <Footer />
     </div>
   );
 }

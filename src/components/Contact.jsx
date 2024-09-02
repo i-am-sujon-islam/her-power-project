@@ -6,7 +6,7 @@ import Container from "./Container";
 
 const Contact = () => {
   return (
-    <div>
+    <div id="contact">
       <Container>
         <h1 className="text-3xl text-center text-orange-600 bg-purple-300 py-2">
           যোগাযোগ

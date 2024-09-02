@@ -10,7 +10,7 @@ import CourseCard from "./CourseCard";
 
 const Course = () => {
   return (
-    <div>
+    <div id="course">
       <Container>
         <h1 className="text-center text-white/90 py-2 text-3xl bg-purple-400">
           এক নজরে আমাদের কোর্সসমূহ

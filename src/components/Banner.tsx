@@ -3,7 +3,7 @@ import Container from "./Container";
 
 const Banner = () => {
   return (
-    <div>
+    <div id="home">
       <Container>
         <img
           className="max-h-96 lg:max-h-[450px] w-full"
